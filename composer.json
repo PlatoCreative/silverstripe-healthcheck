@@ -8,6 +8,6 @@
 		"email": "web@platocreative.co.nz"
 	}],
 	"extra": {
-		"installer-name": "siteconfig"
+		"installer-name": "healthcheck"
 	}
 }
