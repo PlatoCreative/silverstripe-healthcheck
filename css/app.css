@@ -1,0 +1,89 @@
+/*
+ * Base styles
+ */
+html, body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Header
+ */
+header {
+	width: 100%;
+	padding: 40px 0;
+	text-align: center;
+	color: #f1f1f1;
+}
+
+header h1 {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+/*
+ * Base styles
+ */
+main {
+	padding: 20px;
+}
+
+h4 {
+	margin: 0;
+}
+
+/*
+ * Environment styling
+ */
+body.dev header {
+	background-color: #e74c3c;
+}
+body.test header {
+	background-color: #e67e22;
+}
+body.live header {
+	background-color: #2ecc71;
+}
+
+/*
+ * Re-usuable classes
+ */
+.text-left {
+	text-align: left;
+	display: block;
+}
+
+.clear {
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+/*
+ * Pills
+ */
+.pill {
+	display: block;
+	background: #eee;
+	-webkit-border-radius: 16px;
+	border-radius: 6px;
+	font-size: 13px;
+	margin: 0 0 8px 0;
+	padding: 20px 28px;
+	text-align: center;
+}
+
+.pill ul {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.pill strong{
+	display: block;
+	text-transform: uppercase;
+}

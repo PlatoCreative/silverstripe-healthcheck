@@ -1,0 +1,20 @@
+{
+	"name": "platocreative/silverstripe-healthcheck",
+	"description": "Silverstripe Health Check.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "health", "check", "status"],
+	"authors": [{
+		"name": "Plato Creative",
+		"email": "web@platocreative.co.nz"
+	}],
+	"require": {
+		"silverstripe/framework": "3.*"
+	},
+	"extra": {
+		"installer-name": "healthcheck"
+	},
+	"minimum-stability": "dev",
+	"autoload": {
+		"classmap": ["tests/behat/"]
+	}
+}
