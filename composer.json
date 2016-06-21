@@ -7,14 +7,17 @@
 		"name": "Plato Creative",
 		"email": "web@platocreative.co.nz"
 	}],
-	"require": {
-		"silverstripe/framework": "3.*"
-	},
-	"extra": {
-		"installer-name": "healthcheck"
-	},
-	"minimum-stability": "dev",
 	"autoload": {
-		"classmap": ["tests/behat/"]
+		"psr-0": {
+			"Plato\\HealthCheck": "src/"
+		}
+	},
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~3.7.0",
+		"symfony/class-loader": "~2.3",
+		"silverstripe/framework": "~3.1.0"
 	}
 }
