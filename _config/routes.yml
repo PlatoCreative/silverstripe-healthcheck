@@ -4,4 +4,4 @@ After: framework/routes#coreroutes
 ---
 Director:
   rules:
-   'health/check//$Action/$ID/$Name':    'HealthCheck_Controller'
+   'dev/healthcheck':    'HealthCheck_Controller'

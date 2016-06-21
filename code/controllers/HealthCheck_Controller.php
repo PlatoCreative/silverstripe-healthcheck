@@ -5,12 +5,13 @@
  */
 class HealthCheck_Controller extends Controller {
 
-	private static $allowed_actions = array (
-		'index' => 'ADMIN'
-	);
-
 	public function init() {
 		parent::init();
+
+		if(!Member::currentUserID()) {
+			Security::permissionFailure('', 'You need to be logged in to view the health of this site.');
+	    }
+
 		Requirements::css("healthcheck/css/simplegrid.css");
 		Requirements::css("healthcheck/css/app.css");
 		Requirements::css("https://fonts.googleapis.com/css?family=Open+Sans");
