@@ -12,14 +12,16 @@ class HealthCheck_Controller extends Controller {
 			Security::permissionFailure('', 'You need to be logged in to view the health of this site.');
 	    }
 
+		Requirements::javascript('https://use.fontawesome.com/7eb8f2f8df.js');
 		Requirements::css("healthcheck/css/simplegrid.css");
 		Requirements::css("healthcheck/css/app.css");
 		Requirements::css("https://fonts.googleapis.com/css?family=Open+Sans");
+		
 	}
 
 	/**
      * Display information when default route is viewed
-	 * Default routes is /health/check
+	 * Default routes is /dev/healthcheck
      */
 	public function index()
 	{
@@ -28,7 +30,7 @@ class HealthCheck_Controller extends Controller {
 			'Content' => 'Health check content...',
 			'Environment' => Director::get_environment_type(),
 			'Mailer' => Email::mailer()->class,
-			'AdminEmail' => Email::getAdminEmail(),
+			'AdminEmail' => Config::inst()->get('Email', 'admin_email'),
 			'SendAllEmailsTo' => Config::inst()->get('Email', 'send_all_emails_to'),
 			'Nofollow' => $this->getRobotsMetaTag(),
 			'Logging' => $this->getLogWriters(),

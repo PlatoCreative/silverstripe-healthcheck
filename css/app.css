@@ -87,3 +87,13 @@ body.live header {
 	display: block;
 	text-transform: uppercase;
 }
+
+.pill .fa-check-circle-o {
+	color: #2ecc71;
+}
+.pill .fa-times-circle-o {
+	color: #e74c3c;
+}
+.pill .fa-info-circle {
+	color: #666;
+}
